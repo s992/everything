@@ -8,4 +8,5 @@ py_binary(
     "//tasky/src/lib:taskwarrior",
     "//tasky/src/lib:ui",
   ],
+  imports = ["src"]
 )
