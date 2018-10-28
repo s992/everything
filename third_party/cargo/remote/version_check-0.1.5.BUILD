@@ -6,13 +6,13 @@ DO NOT EDIT! Replaced on runs of cargo-raze
 package(default_visibility = [
   # Public for visibility by "@raze__crate__version//" targets.
   #
-  # Prefer access through "//cargo", which limits external
+  # Prefer access through "//third_party/cargo", which limits external
   # visibility to explicit Cargo.toml dependencies.
   "//visibility:public",
 ])
 
 licenses([
-  "notice", # "MIT"
+  "notice", # "MIT,Apache-2.0"
 ])
 
 load(
@@ -23,13 +23,9 @@ load(
 )
 
 
-alias(
-  name = "redox_syscall",
-  actual = ":syscall",
-)
 
 rust_library(
-    name = "syscall",
+    name = "version_check",
     crate_root = "src/lib.rs",
     crate_type = "lib",
     srcs = glob(["**/*.rs"]),
@@ -38,7 +34,7 @@ rust_library(
     rustc_flags = [
         "--cap-lints allow",
     ],
-    version = "0.1.40",
+    version = "0.1.5",
     crate_features = [
     ],
 )

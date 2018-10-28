@@ -6,13 +6,13 @@ DO NOT EDIT! Replaced on runs of cargo-raze
 package(default_visibility = [
   # Public for visibility by "@raze__crate__version//" targets.
   #
-  # Prefer access through "//cargo", which limits external
+  # Prefer access through "//third_party/cargo", which limits external
   # visibility to explicit Cargo.toml dependencies.
   "//visibility:public",
 ])
 
 licenses([
-  "notice", # "MIT,Apache-2.0"
+  "notice", # "Apache-2.0,MIT"
 ])
 
 load(
@@ -23,20 +23,21 @@ load(
 )
 
 
+# Unsupported target "thread_local" with type "bench" omitted
 
 rust_library(
-    name = "unicode_xid",
+    name = "thread_local",
     crate_root = "src/lib.rs",
     crate_type = "lib",
     srcs = glob(["**/*.rs"]),
     deps = [
+        "@raze__lazy_static__1_1_0//:lazy_static",
     ],
     rustc_flags = [
         "--cap-lints allow",
     ],
-    version = "0.1.0",
+    version = "0.3.6",
     crate_features = [
-        "default",
     ],
 )
 

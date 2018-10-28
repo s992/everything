@@ -16,7 +16,7 @@ text_io = "0.1.7"
 
 [raze]
 genmode = "Remote"
-workspace_path = "//cargo"
+workspace_path = "//third_party/cargo"
 
 [raze.crates.lazy_static.'1.1.0']
 additional_flags = [

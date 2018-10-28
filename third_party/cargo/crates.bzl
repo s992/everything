@@ -20,7 +20,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "68f56c7353e5a9547cbd76ed90f7bb5ffc3ba09d4ea9bd1d8c06c8b1142eeb5a",
         strip_prefix = "aho-corasick-0.6.8",
-        build_file = "//cargo/remote:aho-corasick-0.6.8.BUILD"
+        build_file = "//third_party/cargo/remote:aho-corasick-0.6.8.BUILD"
     )
 
     _new_http_archive(
@@ -29,7 +29,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "082bb9b28e00d3c9d39cc03e64ce4cea0f1bb9b3fde493f0cbc008472d22bdf4",
         strip_prefix = "cfg-if-0.1.6",
-        build_file = "//cargo/remote:cfg-if-0.1.6.BUILD"
+        build_file = "//third_party/cargo/remote:cfg-if-0.1.6.BUILD"
     )
 
     _new_http_archive(
@@ -38,7 +38,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "d60c92df70dfaaabecc14b409fd79f55ba0f247780529db1d73bfa601e1d3ac0",
         strip_prefix = "docopt-1.0.1",
-        build_file = "//cargo/remote:docopt-1.0.1.BUILD"
+        build_file = "//third_party/cargo/remote:docopt-1.0.1.BUILD"
     )
 
     _new_http_archive(
@@ -47,7 +47,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "ca488b89a5657b0a2ecd45b95609b3e848cf1755da332a0da46e2b2b1cb371a7",
         strip_prefix = "lazy_static-1.1.0",
-        build_file = "//cargo/remote:lazy_static-1.1.0.BUILD"
+        build_file = "//third_party/cargo/remote:lazy_static-1.1.0.BUILD"
     )
 
     _new_http_archive(
@@ -56,7 +56,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "76e3a3ef172f1a0b9a9ff0dd1491ae5e6c948b94479a3021819ba7d860c8645d",
         strip_prefix = "libc-0.2.43",
-        build_file = "//cargo/remote:libc-0.2.43.BUILD"
+        build_file = "//third_party/cargo/remote:libc-0.2.43.BUILD"
     )
 
     _new_http_archive(
@@ -65,7 +65,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "4b3629fe9fdbff6daa6c33b90f7c08355c1aca05a3d01fa8063b822fcf185f3b",
         strip_prefix = "memchr-2.1.0",
-        build_file = "//cargo/remote:memchr-2.1.0.BUILD"
+        build_file = "//third_party/cargo/remote:memchr-2.1.0.BUILD"
     )
 
     _new_http_archive(
@@ -74,7 +74,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "3d7b7eaaa90b4a90a932a9ea6666c95a389e424eff347f0f793979289429feee",
         strip_prefix = "proc-macro2-0.4.20",
-        build_file = "//cargo/remote:proc-macro2-0.4.20.BUILD"
+        build_file = "//third_party/cargo/remote:proc-macro2-0.4.20.BUILD"
     )
 
     _new_http_archive(
@@ -83,7 +83,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "dd636425967c33af890042c483632d33fa7a18f19ad1d7ea72e8998c6ef8dea5",
         strip_prefix = "quote-0.6.8",
-        build_file = "//cargo/remote:quote-0.6.8.BUILD"
+        build_file = "//third_party/cargo/remote:quote-0.6.8.BUILD"
     )
 
     _new_http_archive(
@@ -92,7 +92,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "c214e91d3ecf43e9a4e41e578973adeb14b474f2bee858742d127af75a0112b1",
         strip_prefix = "redox_syscall-0.1.40",
-        build_file = "//cargo/remote:redox_syscall-0.1.40.BUILD"
+        build_file = "//third_party/cargo/remote:redox_syscall-0.1.40.BUILD"
     )
 
     _new_http_archive(
@@ -101,7 +101,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "7e891cfe48e9100a70a3b6eb652fef28920c117d366339687bd5576160db0f76",
         strip_prefix = "redox_termios-0.1.1",
-        build_file = "//cargo/remote:redox_termios-0.1.1.BUILD"
+        build_file = "//third_party/cargo/remote:redox_termios-0.1.1.BUILD"
     )
 
     _new_http_archive(
@@ -110,7 +110,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "2069749032ea3ec200ca51e4a31df41759190a88edca0d2d86ee8bedf7073341",
         strip_prefix = "regex-1.0.5",
-        build_file = "//cargo/remote:regex-1.0.5.BUILD"
+        build_file = "//third_party/cargo/remote:regex-1.0.5.BUILD"
     )
 
     _new_http_archive(
@@ -119,7 +119,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "747ba3b235651f6e2f67dfa8bcdcd073ddb7c243cb21c442fc12395dfcac212d",
         strip_prefix = "regex-syntax-0.6.2",
-        build_file = "//cargo/remote:regex-syntax-0.6.2.BUILD"
+        build_file = "//third_party/cargo/remote:regex-syntax-0.6.2.BUILD"
     )
 
     _new_http_archive(
@@ -128,7 +128,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "15c141fc7027dd265a47c090bf864cf62b42c4d228bbcf4e51a0c9e2b0d3f7ef",
         strip_prefix = "serde-1.0.80",
-        build_file = "//cargo/remote:serde-1.0.80.BUILD"
+        build_file = "//third_party/cargo/remote:serde-1.0.80.BUILD"
     )
 
     _new_http_archive(
@@ -137,7 +137,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "225de307c6302bec3898c51ca302fc94a7a1697ef0845fcee6448f33c032249c",
         strip_prefix = "serde_derive-1.0.80",
-        build_file = "//cargo/remote:serde_derive-1.0.80.BUILD"
+        build_file = "//third_party/cargo/remote:serde_derive-1.0.80.BUILD"
     )
 
     _new_http_archive(
@@ -146,7 +146,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "bb4f380125926a99e52bc279241539c018323fab05ad6368b56f93d9369ff550",
         strip_prefix = "strsim-0.7.0",
-        build_file = "//cargo/remote:strsim-0.7.0.BUILD"
+        build_file = "//third_party/cargo/remote:strsim-0.7.0.BUILD"
     )
 
     _new_http_archive(
@@ -155,7 +155,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "baaba45c6bf60fe29aaf241fa33306c0b75c801edea8378263a8f043b09a5634",
         strip_prefix = "syn-0.15.14",
-        build_file = "//cargo/remote:syn-0.15.14.BUILD"
+        build_file = "//third_party/cargo/remote:syn-0.15.14.BUILD"
     )
 
     _new_http_archive(
@@ -164,7 +164,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "689a3bdfaab439fd92bc87df5c4c78417d3cbe537487274e9b0b2dce76e92096",
         strip_prefix = "termion-1.5.1",
-        build_file = "//cargo/remote:termion-1.5.1.BUILD"
+        build_file = "//third_party/cargo/remote:termion-1.5.1.BUILD"
     )
 
     _new_http_archive(
@@ -173,7 +173,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "9658b61ebd1d2a40c276ba2335890b9eb6550b67458a6fbce2022e58c3350a50",
         strip_prefix = "text_io-0.1.7",
-        build_file = "//cargo/remote:text_io-0.1.7.BUILD"
+        build_file = "//third_party/cargo/remote:text_io-0.1.7.BUILD"
     )
 
     _new_http_archive(
@@ -182,7 +182,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "c6b53e329000edc2b34dbe8545fd20e55a333362d0a321909685a19bd28c3f1b",
         strip_prefix = "thread_local-0.3.6",
-        build_file = "//cargo/remote:thread_local-0.3.6.BUILD"
+        build_file = "//third_party/cargo/remote:thread_local-0.3.6.BUILD"
     )
 
     _new_http_archive(
@@ -191,7 +191,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "fd2be2d6639d0f8fe6cdda291ad456e23629558d466e2789d2c3e9892bda285d",
         strip_prefix = "ucd-util-0.1.1",
-        build_file = "//cargo/remote:ucd-util-0.1.1.BUILD"
+        build_file = "//third_party/cargo/remote:ucd-util-0.1.1.BUILD"
     )
 
     _new_http_archive(
@@ -200,7 +200,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "fc72304796d0818e357ead4e000d19c9c174ab23dc11093ac919054d20a6a7fc",
         strip_prefix = "unicode-xid-0.1.0",
-        build_file = "//cargo/remote:unicode-xid-0.1.0.BUILD"
+        build_file = "//third_party/cargo/remote:unicode-xid-0.1.0.BUILD"
     )
 
     _new_http_archive(
@@ -209,7 +209,7 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "fd70f467df6810094968e2fce0ee1bd0e87157aceb026a8c083bcf5e25b9efe4",
         strip_prefix = "utf8-ranges-1.0.1",
-        build_file = "//cargo/remote:utf8-ranges-1.0.1.BUILD"
+        build_file = "//third_party/cargo/remote:utf8-ranges-1.0.1.BUILD"
     )
 
     _new_http_archive(
@@ -218,6 +218,6 @@ def raze_fetch_remote_crates():
         type = "tar.gz",
         sha256 = "914b1a6776c4c929a602fafd8bc742e06365d4bcbe48c30f9cca5824f70dc9dd",
         strip_prefix = "version_check-0.1.5",
-        build_file = "//cargo/remote:version_check-0.1.5.BUILD"
+        build_file = "//third_party/cargo/remote:version_check-0.1.5.BUILD"
     )
 

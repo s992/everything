@@ -19,11 +19,11 @@ git_repository(
 load("@io_bazel_rules_rust//rust:repositories.bzl", "rust_repositories")
 rust_repositories()
 
-load("//cargo:crates.bzl", "raze_fetch_remote_crates")
+load("//third_party/cargo:crates.bzl", "raze_fetch_remote_crates")
 raze_fetch_remote_crates()
 
 load("//bazel:workspace.bzl", "bazel_version")
 bazel_version(name = "bazel_version")
 
 load("@io_bazel_rules_python//python:pip.bzl", "pip_import")
-pip_import(name = "deps", requirements = "//:requirements.txt")
+pip_import(name = "deps", requirements = "//third_party/python:requirements.txt")

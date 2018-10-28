@@ -6,7 +6,7 @@ DO NOT EDIT! Replaced on runs of cargo-raze
 package(default_visibility = [
   # Public for visibility by "@raze__crate__version//" targets.
   #
-  # Prefer access through "//cargo", which limits external
+  # Prefer access through "//third_party/cargo", which limits external
   # visibility to explicit Cargo.toml dependencies.
   "//visibility:public",
 ])
@@ -23,23 +23,32 @@ load(
 )
 
 
+# Unsupported target "dump-syntax" with type "example" omitted
 
 rust_library(
-    name = "serde_derive",
+    name = "syn",
     crate_root = "src/lib.rs",
-    crate_type = "proc-macro",
+    crate_type = "lib",
     srcs = glob(["**/*.rs"]),
     deps = [
         "@raze__proc_macro2__0_4_20//:proc_macro2",
         "@raze__quote__0_6_8//:quote",
-        "@raze__syn__0_15_14//:syn",
+        "@raze__unicode_xid__0_1_0//:unicode_xid",
     ],
     rustc_flags = [
         "--cap-lints allow",
     ],
-    version = "1.0.80",
+    version = "0.15.14",
     crate_features = [
+        "clone-impls",
         "default",
+        "derive",
+        "parsing",
+        "printing",
+        "proc-macro",
+        "proc-macro2",
+        "quote",
+        "visit",
     ],
 )
 

@@ -5,9 +5,9 @@ rust_binary(
   name = "note",
   srcs = ["//note/src:main.rs"],
   deps = [
-    "//cargo:docopt",
-    "//cargo:serde",
-    "//cargo:serde_derive",
+    "//third_party/cargo:docopt",
+    "//third_party/cargo:serde",
+    "//third_party/cargo:serde_derive",
     "//note/src/cmd",
     "//note/src:util",
   ],

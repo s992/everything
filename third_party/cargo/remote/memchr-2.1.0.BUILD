@@ -6,13 +6,14 @@ DO NOT EDIT! Replaced on runs of cargo-raze
 package(default_visibility = [
   # Public for visibility by "@raze__crate__version//" targets.
   #
-  # Prefer access through "//cargo", which limits external
+  # Prefer access through "//third_party/cargo", which limits external
   # visibility to explicit Cargo.toml dependencies.
   "//visibility:public",
 ])
 
 licenses([
-  "notice", # "MIT,Apache-2.0"
+  "notice", # "MIT"
+  "unencumbered", # "Unlicense"
 ])
 
 load(
@@ -26,22 +27,22 @@ load(
 # Unsupported target "build-script-build" with type "custom-build" omitted
 
 rust_library(
-    name = "proc_macro2",
+    name = "memchr",
     crate_root = "src/lib.rs",
     crate_type = "lib",
     srcs = glob(["**/*.rs"]),
     deps = [
-        "@raze__unicode_xid__0_1_0//:unicode_xid",
+        "@raze__cfg_if__0_1_6//:cfg_if",
+        "@raze__libc__0_2_43//:libc",
     ],
     rustc_flags = [
         "--cap-lints allow",
-        "--cfg use_proc_macro",
     ],
-    version = "0.4.20",
+    version = "2.1.0",
     crate_features = [
         "default",
-        "proc-macro",
+        "libc",
+        "use_std",
     ],
 )
 
-# Unsupported target "test" with type "test" omitted

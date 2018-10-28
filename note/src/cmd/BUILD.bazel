@@ -23,8 +23,8 @@ rust_library(
   name = "ls",
   srcs = [":ls.rs"],
   deps = [
+    "//third_party/cargo:termion",
     "//note/src:util",
-    "//cargo:termion",
   ],
 )
 
@@ -32,7 +32,7 @@ rust_library(
   name = "rm",
   srcs = [":rm.rs"],
   deps = [
-    "//cargo:text_io",
+    "//third_party/cargo:text_io",
     "//note/src:util",
   ],
 )

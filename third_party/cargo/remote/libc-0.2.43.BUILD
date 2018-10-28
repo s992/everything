@@ -6,14 +6,13 @@ DO NOT EDIT! Replaced on runs of cargo-raze
 package(default_visibility = [
   # Public for visibility by "@raze__crate__version//" targets.
   #
-  # Prefer access through "//cargo", which limits external
+  # Prefer access through "//third_party/cargo", which limits external
   # visibility to explicit Cargo.toml dependencies.
   "//visibility:public",
 ])
 
 licenses([
-  "notice", # "MIT"
-  "unencumbered", # "Unlicense"
+  "notice", # "MIT,Apache-2.0"
 ])
 
 load(
@@ -24,10 +23,9 @@ load(
 )
 
 
-# Unsupported target "bench" with type "bench" omitted
 
 rust_library(
-    name = "utf8_ranges",
+    name = "libc",
     crate_root = "src/lib.rs",
     crate_type = "lib",
     srcs = glob(["**/*.rs"]),
@@ -36,8 +34,10 @@ rust_library(
     rustc_flags = [
         "--cap-lints allow",
     ],
-    version = "1.0.1",
+    version = "0.2.43",
     crate_features = [
+        "default",
+        "use_std",
     ],
 )
 

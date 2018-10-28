@@ -6,7 +6,7 @@ DO NOT EDIT! Replaced on runs of cargo-raze
 package(default_visibility = [
   # Public for visibility by "@raze__crate__version//" targets.
   #
-  # Prefer access through "//cargo", which limits external
+  # Prefer access through "//third_party/cargo", which limits external
   # visibility to explicit Cargo.toml dependencies.
   "//visibility:public",
 ])
@@ -23,9 +23,10 @@ load(
 )
 
 
+# Unsupported target "build-script-build" with type "custom-build" omitted
 
 rust_library(
-    name = "version_check",
+    name = "serde",
     crate_root = "src/lib.rs",
     crate_type = "lib",
     srcs = glob(["**/*.rs"]),
@@ -34,8 +35,10 @@ rust_library(
     rustc_flags = [
         "--cap-lints allow",
     ],
-    version = "0.1.5",
+    version = "1.0.80",
     crate_features = [
+        "default",
+        "std",
     ],
 )
 

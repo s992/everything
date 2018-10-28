@@ -6,7 +6,7 @@ DO NOT EDIT! Replaced on runs of cargo-raze
 package(default_visibility = [
   # Public for visibility by "@raze__crate__version//" targets.
   #
-  # Prefer access through "//cargo", which limits external
+  # Prefer access through "//third_party/cargo", which limits external
   # visibility to explicit Cargo.toml dependencies.
   "//visibility:public",
 ])
@@ -23,19 +23,22 @@ load(
 )
 
 
+alias(
+  name = "redox_syscall",
+  actual = ":syscall",
+)
 
 rust_library(
-    name = "redox_termios",
+    name = "syscall",
     crate_root = "src/lib.rs",
     crate_type = "lib",
     srcs = glob(["**/*.rs"]),
     deps = [
-        "@raze__redox_syscall__0_1_40//:redox_syscall",
     ],
     rustc_flags = [
         "--cap-lints allow",
     ],
-    version = "0.1.1",
+    version = "0.1.40",
     crate_features = [
     ],
 )

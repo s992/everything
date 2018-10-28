@@ -6,7 +6,7 @@ DO NOT EDIT! Replaced on runs of cargo-raze
 package(default_visibility = [
   # Public for visibility by "@raze__crate__version//" targets.
   #
-  # Prefer access through "//cargo", which limits external
+  # Prefer access through "//third_party/cargo", which limits external
   # visibility to explicit Cargo.toml dependencies.
   "//visibility:public",
 ])
@@ -25,17 +25,21 @@ load(
 
 
 rust_library(
-    name = "ucd_util",
+    name = "serde_derive",
     crate_root = "src/lib.rs",
-    crate_type = "lib",
+    crate_type = "proc-macro",
     srcs = glob(["**/*.rs"]),
     deps = [
+        "@raze__proc_macro2__0_4_20//:proc_macro2",
+        "@raze__quote__0_6_8//:quote",
+        "@raze__syn__0_15_14//:syn",
     ],
     rustc_flags = [
         "--cap-lints allow",
     ],
-    version = "0.1.1",
+    version = "1.0.80",
     crate_features = [
+        "default",
     ],
 )
 

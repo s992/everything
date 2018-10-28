@@ -6,13 +6,13 @@ DO NOT EDIT! Replaced on runs of cargo-raze
 package(default_visibility = [
   # Public for visibility by "@raze__crate__version//" targets.
   #
-  # Prefer access through "//cargo", which limits external
+  # Prefer access through "//third_party/cargo", which limits external
   # visibility to explicit Cargo.toml dependencies.
   "//visibility:public",
 ])
 
 licenses([
-  "notice", # "MIT,Apache-2.0"
+  "notice", # "MIT"
 ])
 
 load(
@@ -23,23 +23,20 @@ load(
 )
 
 
-# Unsupported target "build-script-build" with type "custom-build" omitted
 
 rust_library(
-    name = "lazy_static",
+    name = "redox_termios",
     crate_root = "src/lib.rs",
     crate_type = "lib",
     srcs = glob(["**/*.rs"]),
     deps = [
+        "@raze__redox_syscall__0_1_40//:redox_syscall",
     ],
     rustc_flags = [
         "--cap-lints allow",
-        "--cfg=lazy_static_inline_impl",
     ],
-    version = "1.1.0",
+    version = "0.1.1",
     crate_features = [
     ],
 )
 
-# Unsupported target "no_std" with type "test" omitted
-# Unsupported target "test" with type "test" omitted
