@@ -12,15 +12,12 @@ Please see the individual project directories for more information on each proje
 ├── note
 │   ├── scripts
 │   └── src
-│       └── cmd
 ├── scripts         # Miscellaneous scripts
 ├── tasky
 │   ├── scripts
 │   └── src
-│       └── lib
 └── third_party     # Third party dependencies
     ├── cargo       # Rust dependencies
-    │   └── remote
     └── python      # Python dependencies
 ```
 
