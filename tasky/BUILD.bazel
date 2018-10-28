@@ -1,0 +1,11 @@
+load("@io_bazel_rules_python//python:python.bzl", "py_binary")
+
+py_binary(
+  name = "tasky",
+  srcs = ["//tasky/src:tasky.py"],
+  deps = [
+    "//tasky/src/lib:config",
+    "//tasky/src/lib:taskwarrior",
+    "//tasky/src/lib:ui",
+  ],
+)

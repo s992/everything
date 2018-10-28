@@ -4,5 +4,5 @@ if [ -z "$INSTALL_DIR" ]; then
   INSTALL_DIR="$HOME/dotfiles/bin"
 fi
 
-bazel build //src:note
-cp bazel-bin/src/note "$INSTALL_DIR"
+bazel build //note
+cp bazel-bin/note/note "$INSTALL_DIR"
